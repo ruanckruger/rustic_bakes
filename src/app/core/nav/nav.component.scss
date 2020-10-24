@@ -1,0 +1,43 @@
+@import '../../styles/vars';
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $navHeight;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 100;
+    transition: background-color 0.7s ease, height 0.5s ease;
+
+    &.collapsed {
+        background-color: rgba(255, 255, 255, 1);
+        height: $navHeightCollapsed;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 21px;
+        transform: translateY(-50%);
+
+        img {
+            width: $navHeightCollapsed;
+            transform: scale(0.8);
+        }
+    }
+
+    .links-container{
+        position: absolute;
+        height: 50%;
+        top: 50%;
+        right: 21px;
+        transform: translateY(-50%);
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: $mainPink;
+            font-weight: 600;
+        }
+    }
+}

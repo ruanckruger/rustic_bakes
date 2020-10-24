@@ -1,0 +1,30 @@
+<div class="bg"></div>
+<div class="splash">
+    <img
+        class="splash-logo"
+        src="../../../assets/images/Rustic Bakes Logo 2.png"
+        alt=""
+    >
+</div>
+<section class="product-section">
+    <div class="container">
+        <div class="row">
+            <div
+                *ngFor="let product of products"
+                class="product-container col-md-6"
+            >
+                <div class="product">
+                    <div class="row">
+                        <div class="product-img col-12 col-sm-4">
+                        </div>
+                        <div class="col-12 col-sm-8 product-info">
+                            <h1 class="name"><span>{{product.Name}}</span></h1>
+                            <p class="description">{{product.Description}}</p>
+                            <p class="price">R{{product.Price}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

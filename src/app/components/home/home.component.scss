@@ -1,0 +1,127 @@
+@import '../../styles/vars';
+
+.bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-image: url('../../../assets/images/BG.png');
+    background-size: cover;
+    background-repeat: 0;
+    background-position: center center;
+    z-index: -1;
+}
+
+p {}
+
+section {
+    width: 100vw;
+    background-image: url('../../../assets/images/repeatingBg.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: 140px 140px;
+
+}
+
+.product-section {
+    background-color: white;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.product-container {
+    padding: 14px;
+
+    .product {
+        background-color: lighten($mainPink, 13);
+        border-radius: 7px;
+        height: 280px;
+        box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.3);
+        margin-top: 21px;
+        position: relative;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 3px 12px 1px rgba(0, 0, 0, 0.4);
+        }
+
+        &::after {
+            position: absolute;
+
+        }
+
+        .row {
+            height: 100%;
+        }
+
+        .product-info {
+            padding: 14px;
+            position: relative;
+            height: 100%;
+
+            .name {
+                position: relative;
+
+                span {
+                    z-index: 1;
+                    position: relative;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 120%;
+                    width: 120%;
+                    top: -10%;
+                    left: -10%;
+                    background-color: $mainPink;
+                    z-index: 0;
+                }
+            }
+
+            .description {}
+
+            .price {
+                position: absolute;
+                font-size: 42px;
+                text-align: right;
+                top: 100%;
+                right: 28px;
+                transform: translateY(-70px);
+            }
+        }
+
+        .product-img {
+            background-image: url('../../../assets/images/Banner.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+
+.splash {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-top: -$navHeight;
+
+    .splash-logo {
+        width: 70vmin;
+        opacity: 0;
+        animation: fadeIn 2.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s forwards;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
