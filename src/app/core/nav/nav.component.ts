@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@
 })
 export class NavComponent implements OnInit {
   public hasScrolled: boolean = false;
+  public mobileShowNav = false;
   constructor(private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class NavComponent implements OnInit {
 
   onScroll = (): void => {
     var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    
+
     if (currentScroll > 49) {
       this.hasScrolled = true;
     } else {
@@ -25,5 +26,9 @@ export class NavComponent implements OnInit {
     }
     this.ref.detectChanges();
     console.log(this.hasScrolled);
+  }
+  
+  toggleNav() {
+    this.mobileShowNav = !this.mobileShowNav;
   }
 }

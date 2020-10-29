@@ -1,0 +1,36 @@
+[{
+  "Description": "Simply delicious 12 pack of Cinnabons",
+  "Discount": 0,
+  "Price": 120,
+  "Name": "Rustic Bons",
+  "Image": "/assets/images/Banner.jpg",
+  "FloatImage": "/assets/images/Rustic Bakes Logo.png"
+}, {
+  "Description": "Traditional style cookies",
+  "Discount": 0,
+  "Price": 40,
+  "Name": "Cookies",
+  "Image": "/assets/images/Banner.jpg",
+  "FloatImage": "/assets/images/Rustic Bakes Logo.png"
+}, {
+    "Description": "Oats Crunchies",
+    "Discount": 0,
+    "Price": 40,
+    "Name": "Oats Crunchies",
+    "Image": "/assets/images/products/oat/oat-bg.jpg",
+    "FloatImage": "/assets/images/products/oat/oat-float.png"
+  }, {
+  "Description": "Delicious, succulent, heart-warming Banana Bread",
+  "Discount": 10,
+  "Price": 50,
+  "Name": "Banana Bread",
+  "Image": "/assets/images/products/banana/banana-bg.png",
+  "FloatImage": "/assets/images/products/banana/bread-float.png"
+}, {
+  "Description": "Yummy and healthy, what more do you want?",
+  "Discount": 10,
+  "Price": 50,
+  "Name": "Granola Bars",
+  "Image": "/assets/images/Banner.jpg",
+  "FloatImage": "/assets/images/Rustic Bakes Logo.png"
+}]

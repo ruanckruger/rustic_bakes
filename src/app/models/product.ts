@@ -3,5 +3,6 @@ export interface Product {
     Price: number;
     Discount: number;
     Description: string;
-    image: string;
+    Image: string;
+    FloatImage: string;
 }

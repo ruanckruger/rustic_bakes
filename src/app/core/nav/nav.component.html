@@ -6,9 +6,10 @@
         <img
             src="../../../assets/images/Rustic Bakes Logo.png"
             alt=""
-        >
+        > Rusctic Bakes
     </div>
-    <div class="links-container">
+    <div id="nav-toggle" [class.open]="mobileShowNav" (click)="toggleNav()"></div>
+    <div class="links-container" [class.open]="mobileShowNav">
         <a
             href=""
             class="nav-link"

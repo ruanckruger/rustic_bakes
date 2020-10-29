@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models';
+import productJson from '../../../assets/json/products.json';
 
 @Component({
   selector: 'app-home',
@@ -8,31 +9,14 @@ import { Product } from 'src/app/models';
 })
 export class HomeComponent implements OnInit {
   public products: Product[];
+  public shownProduct = -1;
   constructor() { }
 
   ngOnInit(): void {
-    this.products = [];
-    this.products.push(<Product>{
-      Description: "Simply delicious 12 pack of Cinnabons",
-      Discount: 10,
-      Price: 120,
-      Name: "RusticBons",
-      image: ''
-    });
-    this.products.push(<Product>{
-      Description: "Traditional style cookies",
-      Discount: 12,
-      Price: 70,
-      Name: "Crunchy Cookies",
-      image: ''
-    });
-    this.products.push(<Product>{
-      Description: "Yummy American style cookies",
-      Discount: 10,
-      Price: 50,
-      Name: "Chewy Cookies",
-      image: ''
-    });
+    this.products = productJson;
   }
-
+  showProduct(index: number) {
+    this.shownProduct = index;
+  }
+  
 }
